@@ -30,7 +30,7 @@ def get_current_item_name():
 def my_callback(channel):
     playlist = get_playlist_items()
     current_item_name = get_current_item_name()
-    if (playlist.index(current_item_name) < len(playlist) - 1):
+    if playlist.index(current_item_name) < len(playlist) - 1:
         subprocess.call(["mpc", "next"])
     else:
         subprocess.call(["mpc", "play", "1"])
